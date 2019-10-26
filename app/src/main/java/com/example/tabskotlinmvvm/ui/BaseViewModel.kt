@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.example.tabskotlinmvvm.di.DaggerViewModelInjector
 import com.example.tabskotlinmvvm.di.NetworkModule
 import com.example.tabskotlinmvvm.di.ViewModelInjector
-import com.example.tabskotlinmvvm.ui.cat.CatViewModel
+import com.example.tabskotlinmvvm.ui.cat.CatListViewModel
 import com.example.tabskotlinmvvm.ui.dog.DogViewModel
 
 abstract class BaseViewModel : ViewModel(){
@@ -22,7 +22,7 @@ abstract class BaseViewModel : ViewModel(){
      */
     private fun inject() {
         when (this) {
-            is CatViewModel -> injector.inject(this)
+            is CatListViewModel -> injector.inject(this)
             is DogViewModel -> injector.inject(this)
         }
     }

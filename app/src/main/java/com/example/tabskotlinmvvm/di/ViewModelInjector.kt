@@ -1,6 +1,6 @@
 package com.example.tabskotlinmvvm.di
 
-import com.example.tabskotlinmvvm.ui.cat.CatViewModel
+import com.example.tabskotlinmvvm.ui.cat.CatListViewModel
 import com.example.tabskotlinmvvm.ui.dog.DogViewModel
 import dagger.Component
 import javax.inject.Singleton
@@ -15,7 +15,7 @@ interface ViewModelInjector {
      * Injects required dependencies into the specified PostListViewModel.
      * @param postListViewModel PostListViewModel in which to inject the dependencies
      */
-    fun inject(catViewModel: CatViewModel)
+    fun inject(catListViewModel: CatListViewModel)
     fun inject(dogViewModel: DogViewModel)
 
     @Component.Builder

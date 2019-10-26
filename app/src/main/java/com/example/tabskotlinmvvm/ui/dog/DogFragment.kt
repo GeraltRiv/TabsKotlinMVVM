@@ -21,11 +21,11 @@ class DogFragment : Fragment() {
     ): View? {
         dogViewModel =
             ViewModelProviders.of(this).get(DogViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_cat_view, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dogViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
+        val root = inflater.inflate(R.layout.fragment_dog_view, container, false)
+//        val textView: TextView = root.findViewById(R.id.text_dashboard)
+//        dogViewModel.text.observe(this, Observer {
+//            textView.text = it
+//        })
         return root
     }
 }
