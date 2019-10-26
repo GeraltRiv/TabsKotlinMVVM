@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TabsKotlinMVVM</string>
+    <string name="title_dog_tab">Dog tab</string>
+    <string name="title_cat_tab">Cat tab</string>
+</resources>
