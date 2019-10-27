@@ -5,3 +5,4 @@ package com.example.tabskotlinmvvm.util
 //http://kot3.com/xim/api.php?query=dog
 //http://kot3.com/xim/api.php?query=cat
 const val BASE_URL: String = "http://kot3.com/"
+const val LIST_STATE_KEY: String = "Save_List_State"

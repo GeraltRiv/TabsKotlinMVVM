@@ -3,18 +3,17 @@ package com.example.tabskotlinmvvm.ui.cat
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.MutableLiveData
+import com.example.tabskotlinmvvm.model.CatDao
 import com.example.tabskotlinmvvm.model.data
 import com.example.tabskotlinmvvm.network.PostApi
 import com.example.tabskotlinmvvm.ui.BaseViewModel
-import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import okhttp3.ResponseBody
 import javax.inject.Inject
 
-//class CatListViewModel(private val catDao: CatDao) : BaseViewModel() {
-class CatListViewModel() : BaseViewModel() {
+class CatListViewModel(private val catDao: CatDao) : BaseViewModel() {
+//class CatListViewModel() : BaseViewModel() {
 
     @Inject
     lateinit var postApi: PostApi
@@ -22,11 +21,6 @@ class CatListViewModel() : BaseViewModel() {
     private lateinit var subscription: Disposable
 
     val catListAdapter: CatListAdapter = CatListAdapter()
-
-//    private val _text = MutableLiveData<String>().apply {
-//        value = "This is Cats Fragment"
-//    }
-//    val text: LiveData<String> = _text
 
     val loadingVisibility: MutableLiveData<Int> = MutableLiveData()
 

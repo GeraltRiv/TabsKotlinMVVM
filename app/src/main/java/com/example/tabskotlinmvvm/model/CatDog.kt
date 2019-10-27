@@ -5,10 +5,10 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class data (
-    val data: List<Cat>
+    val data: List<CatDog>
 )
 @Entity
-data class Cat(
+data class CatDog(
     @field:PrimaryKey
     val id: Int,
     val title: String,

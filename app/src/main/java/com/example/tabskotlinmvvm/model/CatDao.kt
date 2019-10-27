@@ -6,9 +6,9 @@ import androidx.room.Query
 
 @Dao
 interface CatDao {
-    @get:Query("SELECT * FROM cat")
-    val all: List<Cat>
+    @get:Query("SELECT * FROM catdog")
+    val all: List<CatDog>
 
     @Insert
-    fun insertAll(vararg posts: Cat)
+    fun insertAll(vararg posts: CatDog)
 }
