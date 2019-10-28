@@ -1,6 +1,5 @@
 package com.example.tabskotlinmvvm.di
 
-import com.example.tabskotlinmvvm.model.DBHelper
 import com.example.tabskotlinmvvm.ui.cat.CatListViewModel
 import com.example.tabskotlinmvvm.ui.dog.DogViewModel
 import dagger.Component
