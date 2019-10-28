@@ -16,6 +16,9 @@ interface CatDao {
     @Query("SELECT * from catdog where id_d=:id")
     fun getCat(id: Int): CatDog
 
+    @Query("SELECT * from catdog where type=:type")
+    fun getCatDogByType(type: String):  List<CatDog>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertChecked(catDog: CatDog)
 }

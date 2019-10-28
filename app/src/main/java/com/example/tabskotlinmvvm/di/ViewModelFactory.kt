@@ -18,7 +18,7 @@ class ViewModelFactory(private val activity: AppCompatActivity) : ViewModelProvi
             @Suppress("UNCHECKED_CAST")
             return CatListViewModel(db.catDao()) as T
         } else if (modelClass.isAssignableFrom(DogViewModel::class.java)) {
-
+            return DogViewModel(db.catDao()) as T
         } else if (modelClass.isAssignableFrom(DetailedViewModel::class.java)) {
             return DetailedViewModel(db.catDao()) as T
         }

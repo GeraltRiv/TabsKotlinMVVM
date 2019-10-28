@@ -13,5 +13,6 @@ data class CatDog(
     val id_d: Int,
     val id: Int,
     val title: String,
-    val url: String
+    val url: String,
+    var type: String
 )

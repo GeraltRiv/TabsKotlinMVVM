@@ -52,10 +52,6 @@ class CatListAdapter: RecyclerView.Adapter<CatListAdapter.ViewHolder>() {
                 val intent = Intent(v.context, DetailedActivity::class.java)
                 intent.putExtra(EXTRA_KEY, catDog.id_d)
                 v.context.startActivity(intent)
-                // To pass any data to next activity
-//                intent.putExtra("keyIdentifier", value)
-// start your next activity
-
             })
         }
     }

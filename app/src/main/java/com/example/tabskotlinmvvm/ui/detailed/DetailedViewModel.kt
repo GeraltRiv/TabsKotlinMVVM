@@ -27,6 +27,7 @@ class DetailedViewModel(private val catDao: CatDao) : BaseViewModel() {
         var catDog: CatDog? = null
         Single.fromCallable {
             catDog = catDao.getCat(idOfCatDog)
+
         }
             .subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread())

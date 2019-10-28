@@ -39,31 +39,4 @@ class CatFragment : Fragment() {
         })
         return root
     }
-
-
-//    override fun onCreateView(
-//        inflater: LayoutInflater,
-//        container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        catListViewModel = ViewModelProviders.of(this).get(CatListViewModel::class.java)
-//        val root = inflater.inflate(R.layout.fragment_cat, container, false)
-//        val recyclerViev = root.findViewById<RecyclerView>(R.id.cat_list)
-//
-//        recyclerViev.apply {
-//            setHasFixedSize(true)
-//            layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-//            adapter = catListViewModel.catListAdapter
-//
-//        }
-//
-//        val progressBar = root.findViewById<ProgressBar>(R.id.progress_bar)
-//        catListViewModel.loadingVisibility.observe(this, Observer {
-//            progressBar.visibility = it
-//        })
-////        catListViewModel.text.observe(this, Observer {
-////            textView.text = it
-////        })
-//        return root
-//    }
 }
