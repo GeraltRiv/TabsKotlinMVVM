@@ -9,7 +9,8 @@ data class data (
 )
 @Entity
 data class CatDog(
-    @field:PrimaryKey
+    @PrimaryKey(autoGenerate = true)
+    val id_d: Int,
     val id: Int,
     val title: String,
     val url: String

@@ -7,20 +7,20 @@ import com.example.tabskotlinmvvm.ui.BaseViewModel
 
 class CatViewModel : BaseViewModel() {
 
-    private val postTitle = MutableLiveData<String>()
-    private val postBody = MutableLiveData<Uri>()
+    private val catDogtTitle = MutableLiveData<String>()
+    private val catDogImage = MutableLiveData<Uri>()
 
     fun bind(catDog: CatDog){
-        postTitle.value = catDog.title
-        postBody.value = Uri.parse(catDog.url)
+        catDogtTitle.value = catDog.title
+        catDogImage.value = Uri.parse(catDog.url)
 
     }
 
-    fun getPostTitle():MutableLiveData<String>{
-        return postTitle
+    fun getCatDogTitle():MutableLiveData<String>{
+        return catDogtTitle
     }
 
-    fun getPostImage():MutableLiveData<Uri>{
-        return postBody
+    fun getCatDogImage():MutableLiveData<Uri>{
+        return catDogImage
     }
 }

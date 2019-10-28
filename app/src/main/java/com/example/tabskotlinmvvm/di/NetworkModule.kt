@@ -1,5 +1,6 @@
 package com.example.tabskotlinmvvm.di
 
+import android.content.SharedPreferences
 import com.example.tabskotlinmvvm.network.PostApi
 import com.example.tabskotlinmvvm.util.BASE_URL
 import dagger.Module

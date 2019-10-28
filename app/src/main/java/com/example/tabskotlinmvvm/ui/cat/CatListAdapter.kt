@@ -11,6 +11,7 @@ import com.example.tabskotlinmvvm.DetailedActivity
 
 import com.example.tabskotlinmvvm.R
 import com.example.tabskotlinmvvm.model.CatDog
+import com.example.tabskotlinmvvm.util.EXTRA_KEY
 import com.squareup.picasso.Picasso
 
 class CatListAdapter: RecyclerView.Adapter<CatListAdapter.ViewHolder>() {
@@ -41,15 +42,15 @@ class CatListAdapter: RecyclerView.Adapter<CatListAdapter.ViewHolder>() {
 
         fun bind(catDog : CatDog) {
             viewModel.bind(catDog)
-            viewModel.getPostTitle().observeForever { t ->
+            viewModel.getCatDogTitle().observeForever { t ->
                 v.findViewById<TextView>(R.id.catListTitle).text = t
             }
-            viewModel.getPostImage().observeForever { t ->
+            viewModel.getCatDogImage().observeForever { t ->
                 Picasso.get().load(t).into(v.findViewById<ImageView>(R.id.catListImage))
-
             }
             v.setOnClickListener(View.OnClickListener { v ->
                 val intent = Intent(v.context, DetailedActivity::class.java)
+                intent.putExtra(EXTRA_KEY, catDog.id_d)
                 v.context.startActivity(intent)
                 // To pass any data to next activity
 //                intent.putExtra("keyIdentifier", value)

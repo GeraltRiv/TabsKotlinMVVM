@@ -7,5 +7,5 @@ import com.example.tabskotlinmvvm.model.CatDao
 
 @Database(entities = arrayOf(CatDog::class), version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun postDao(): CatDao
+    abstract fun catDao(): CatDao
 }
